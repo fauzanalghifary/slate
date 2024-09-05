@@ -12,7 +12,7 @@ import React, {
   ForwardedRef,
 } from 'react'
 import { JSX } from 'react'
-import scrollIntoView from 'scroll-into-view-if-needed'
+// import scrollIntoView from 'scroll-into-view-if-needed'
 import {
   Editor,
   Element,
@@ -1856,9 +1856,9 @@ const defaultScrollSelectionIntoView = (
   ) {
     const leafEl = domRange.startContainer.parentElement!
     leafEl.getBoundingClientRect = domRange.getBoundingClientRect.bind(domRange)
-    scrollIntoView(leafEl, {
-      scrollMode: 'if-needed',
-    })
+    // scrollIntoView(leafEl, {
+    //   scrollMode: 'if-needed',
+    // })
 
     // @ts-expect-error an unorthodox delete D:
     delete leafEl.getBoundingClientRect
